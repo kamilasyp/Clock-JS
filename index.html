@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zegar</title>
+    <style>
+        
+        #clock{
+            background-color: darkgray;
+            margin: 5px;
+            margin-top: 5px;
+            padding-top: 25px; 
+            text-align: center;
+            font-weight: bold;
+            font-family: sans-serif;
+            color: white;
+            width: 150px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="clock"> : :</div>
+    <script>
+        window.onload = function() {
+            setInterval(function() {
+                var time = new Date();
+                var hours = time.getHours();
+                var minutes = time.getMinutes();
+                var seconds = time.getSeconds();
+
+                document.getElementById("clock").innerHTML
+                    = hours + " : " + minutes + " : " + seconds;
+            }, 1000 );
+        }
+    </script>
+</body>
+
+</html>
